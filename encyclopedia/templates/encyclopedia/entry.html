@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+    {% if exist %}
+{{ content|safe }}
+<div style="text-align: center; margin-top: 50px;">
+</div>
+    {% else %}
+<h1 style="text-align: center; margin-top: 100px;">{{ message }}</h1>
+<div style="text-align: center; margin-top: 50px;">
+</div>
+    {% endif %}
+{% endblock %}
